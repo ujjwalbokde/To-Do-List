@@ -1,0 +1,36 @@
+
+.main{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    text-decoration:overline !important;
+}
+.addtask{
+    margin-left: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.listing-card{
+    width:18rem !important;
+}
+.title-img{
+    width:33.3%;
+    height:200px;
+}
+.btn2{
+    margin-left: 10px;
+}
+.title{
+    font-size: larger;
+    font-weight: 700;
+}
+.card{
+    box-shadow: 100px !important;
+    background-color: #FFE69C;
+}
+
+hr{
+    color: blueviolet;
+    height: 10px;
+}

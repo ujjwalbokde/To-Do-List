@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate") -%>
+
+<body>
+    <h1 class="main">To-Do List</h1>
+    <form action="/tasks/new" method="post" novalidate class="needs-validation col-6 offset-3 ">
+        <div class="mb-3 mt-3">
+            <label class="form-label" for="title">Work Title</label>
+            <input class="form-control" type="text" name="title" id="" required>
+            <div class="valid-feedback">
+                Title looks good!
+            </div>
+        </div>
+        <div>
+            <label class="form-label" for="description">Work Details</label>
+            <textarea class="form-control" name="description" id="" required></textarea>
+            <div class="invalid-feedback">
+                please add some details about your work
+            </div>
+        </div>
+        <div class="mb-3 mt-3">
+            <button class="btn btn-dark">Add work</button>
+        </div>
+    </form>
+</body>
+

@@ -1,0 +1,39 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+  <h1 class="main">To-Do List</h1>
+  <div class="addtask">
+    <h1>Add task to do!</h1>
+  <form method="get" action="/tasks/new">
+    <button class="btn btn-dark addtask-btn">Add Task</button>
+  </form> 
+  </div> 
+  <br>
+  <hr>
+    <div class="container">
+        <div class="row">
+       <% for(let task of allTask) {%>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card listing-card" style="width: 20rem;">
+                  <div class="card-body">
+                    <p class="card-text title">
+                      <%=task.title%>
+                    </p>
+                    <p class="card-text">
+                      <%=task.description%>
+                    </p>
+                    <div style="display: flex;">  
+                      <form method="get" action="/tasks/<%= task._id  %>/edit">
+                        <button class="btn btn-dark">Edit</button>
+                      </form>
+                      <form action="/tasks/<%= task._id %>?_method=delete" method="post">
+                        <button class="btn btn-dark btn2">Delete</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+      <br>
+</body>
